@@ -854,6 +854,7 @@ class AmazonS3Driver extends AbstractHierarchicalFilesystemDriver
      */
     public function getPermissions($identifier)
     {
+        if ($identifier === "") return [];
         return $this->getObjectPermissions($identifier);
     }
 
